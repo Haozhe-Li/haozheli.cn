@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>李浩哲 - 网站</title>
+  <meta content="Haozheli's personal website, my bio and works" name="description">
+  <meta content="haozheli, Haozhe Li, 李浩哲, lihaozhe, Personal Website" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6db6799e59.js" crossorigin="anonymous"></script>
+
+  <!--Install hCaptcha-->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Weixin Popup style -->
+  <style>
+    /* 弹窗样式 */
+    #popup {
+      display: none; /* 默认隐藏 */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+      z-index: 9999;
+    }
+
+    #popup img {
+      display: block;
+      max-width: 60%;
+      max-height: 60%;
+      margin: 10% auto; /* 图片居中 */
+    }
+
+    #closeBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 70px;
+      cursor: pointer;
+    }
+  </style>
+  <!-- End of Weixin Popup style -->
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="index.html">李浩哲</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>我是一个充满热情的<span>学生</span>、<span>开发人员</span>、<span>音乐家</span>和<span>电影制作人</span></h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">主页</a></li>
+          <li><a class="nav-link" href="#about">关于</a></li>
+          <li><a class="nav-link" href="#resume">简历</a></li>
+          <li><a class="nav-link" href="#portfolio">作品集</a></li>
+          <li><a class="nav-link" href="#contact">联系</a></li>
+          <li><a class="nav-link" href="https://www.haozheli.com">English🇬🇬🇧</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="https://github.com/Haozhe-Li" class="github"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/haozheli04/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/haozheli" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCBI1IZM1HK6PP9COneQXpog" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="weixin" onclick="showPopup('assets/img/weixin-qr.webp'); return false;"><i class="fa-brands fa-weixin"></i></a>
+        <a href="https://space.bilibili.com/421778349?spm_id_from=333.1007.0.0" class="bilibili"><i class="fa-brands fa-bilibili"></i></a>
+        <a href="https://v.douyin.com/iDQXrmM/" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.strava.com/athletes/haozheli" class="Strava"><i class="fa-brands fa-strava"></i></a>
+      </div>
+
+      <!-- Pop Up element -->
+      <div id="popup">
+        <span id="closeBtn" onclick="closePopup()"><i class="fa-solid fa-circle-xmark"></i></span>
+        <img src="" alt="Pop up QR code">
+      </div>    
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>关于</h2>
+        <p>了解更多关于我的信息</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/aboutme.webp" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>学生、音乐家、开发人员、电影制作人</h3>
+          <p class="fst-italic">
+            你好，我是李浩哲。我在伊利诺伊大学主修计算机科学和音乐，成绩优秀。我在C++、Java和Python编程方面有丰富的经验，并且在视频和音乐制作方面有扎实的基础。除了我的学业之外，我还创办了一个成功的视频博客频道，拥有超过10,000名订阅者，在那里分享视频教程、电影和vlogs。我也有HTML和CSS的经验，并从零开始建立了自己的个人网站。我是一个充满创造力并且具备决心的人，对技术和艺术充满热情，非常期待将我的技能与热忱带到任何项目或团队中去。
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>姓名：</strong> <span>李浩哲</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>生日：</strong> <span>2004年4月16日</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>网站：</strong> <span><a href="https://www.haozheli.com">haozheli.com</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>手机：</strong> <span><a href="sms:+1217 693 8436">+1 217 693 8436</a></span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>年龄：</strong> <span><script>document.write(new Date().getFullYear() - 2004);</script></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>学位：</strong> <span>Bachelor of Science (IP)</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>邮箱：</strong> <span><a href="mailto:hi@haozheli.com?subject=[DO NOT REMOVE from haozheli.com]">hi@haozheli.com</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>城市：</strong> <span>Urbana, IL</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+    <!-- ======= Counts ======= -->
+    <div class="counts container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p>项目</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <span data-purecounter-start="0" data-purecounter-end="113" data-purecounter-duration="1" class="purecounter"></span>
+            <p>作品</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <span data-purecounter-start="0" data-purecounter-end="1600000" data-purecounter-duration="1" class="purecounter"></span>
+            <p>播放</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1" class="purecounter"></span>
+            <p>订阅</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End Counts -->
+
+    <!-- ======= Skills  ======= -->
+    <div class="skills container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="row skills-content">
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">C++ <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Java <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Python <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">ML <i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">HTML / CSS <i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Video and Photo Editing<i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Digital Signal Processing<i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Logic Pro <i class="val">55%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- End Skills -->
+
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+
+      <div class="section-title">
+        <h2>Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+            <h3>Coding</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <h3>Filmmaking</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <h3>Cello</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <h3>Piano</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Jogging</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>RADWIMPS</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Basketball</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Video Game</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Mrs. Green Apple</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Riding</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Traveling</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <h3>Camping</h3>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Interests -->
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check My Resume</p>
+        <a href="assets/files/haozheli_resume.pdf">See More in PDF</a>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Sumary</h3>
+          <div class="resume-item pb-0">
+            <h4>Haozhe Li</h4>
+            <p>
+            <ul>
+              <li>Skilled in embracing essential skills in programming, filming, and music production.</li>
+              <li>Proficient in object-oriented programming languages such as Java, C++, and web development involving HTML.</li>
+              <li>Experienced in machine learning using Python.</li>
+              <li>Proficient in DSP in Pure Data and Max.</li>
+              <li>Built and maintained personal website at haozheli.com and studio's website welogstudio.com.</li>
+              <li>Strong understanding of Music Theory and Musicianship.</li>
+              <li>Proficient in parsing and analysing music score using programming language.</li>
+              <li>Proficient in using software applications such as Davinci Resolve, Logic Pro, and Photoshop for video, music production, and photography.</li>
+              <li>Certified editor and color grader with Davinci Resolve by BMD</li>
+              <li>Accomplished musician with 11 years of experience as principal cellist in a symphony orchestra.</li>
+              <li>A dedicated video blogger with a following of 10K.</li>
+            </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>BS, Computer Science and Music</h4>
+            <h5>2022 - </h5>
+            <p><em>University of Illinois at Urbana - Champaigns, IL</em></p>
+            <ul>
+              <li>Currently completing courses in computer science, music theory and technology, musicianship, and computational music.</li>
+              <li>Prominent coursework: CS 124 Machine Project, CS 128 Machine Problem, MUS 105 Machine Project</li>
+              <li>GPA 3.96</li>
+              <li>UIUC Dean's List Fall 2022 and Spring 2023</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>High School</h4>
+            <h5>2019 - 2022</h5>
+            <p><em>Beijing National Day School, Beijing</em></p>
+            <ul>
+              <li>Graduated summa cum laude—3.9 GPA</li>
+              <li>Volunteered on creating and revising learning materials in ZNotes</li>
+              <li>Completed courses in Alevel Math, Physics and Economics with grade A</li>
+              <li>Played the position of principal Cellist in school orchestra from 2016 to 2021</li>
+            </ul>
+          </div>
+        </div>
+        <!--Experience-->
+        <div class="col-lg-6">
+          <h3 class="resume-title">Experience</h3>
+          <div class="resume-item">
+            <h4>Course Assistant </h4>
+            <h5>02/2023 - 05/2023</h5>
+            <p><em>Urbana, IL</em></p>
+            <p>
+            <ul>
+              <li>Course Assistant of CS 124. I regularly post my work and practices, and respond to questions in the help section, in order to continuously demonstrate my progress and knowledge.</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Contributor</h4>
+            <h5>12/2021 - 04/2022</h5>
+            <p><em>Online</em></p>
+            <p>
+            <ul>
+              <li>Created and revised revision material for the ZNotes to help more students to prepare Alevel Physics</li>
+              <li>Had written chapters on A2 astrophysics, quantum physics, and atomic physics, and revised electromagnetism as well as thermodynamics</li>
+            </ul>
+            </p>
+          </div>
+          <!--Other-->
+
+          <h3 class="resume-title">Others</h3>
+          <div class="resume-item">
+            <h4>Skills</h4>
+            <p>
+            <ul>
+              <li>Programming, Filming, Music Production, Photography, Machine Learning, Web Design</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Languages</h4>
+            <p>
+            <ul>
+              <li>English, Chinese (Mandarin)</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Certificates</h4>
+            <p>
+            <ul>
+              <li>Crash Course on Python, Using Python to interact with Operating System, Supervised Machine Learning: Regression and Classification, Certified editor and color grader with Davinci Resolve by BMD</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>My Works</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-coding">Coding</li>
+            <li data-filter=".filter-music">Music</li>
+            <li data-filter=".filter-design">Design</li>
+            <li data-filter=".filter-filmming">Filmming</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/detect-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Similarity Detector</h4>
+              <p>Coding, Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-detect.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/website-preview2.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Personal Website</h4>
+              <p>Coding, Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-website.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/cs128-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>CS 128 Machine Problem</h4>
+              <p>Coding</p>
+              <div class="portfolio-links">
+                <a href="portfolio-cs128.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-music">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/mus105-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>MUS 105 Machine Project</h4>
+              <p>Coding, Music</p>
+              <div class="portfolio-links">
+                <a href="portfolio-mus105.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/cs124-preview2.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>CS 124 Machine Project</h4>
+              <p>Coding</p>
+              <div class="portfolio-links">
+                <a href="portfolio-cs124.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/ai-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>AI on Haozheli.com</h4>
+              <p>Coding, Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-ai.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/welog-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>WeLogStudio Website</h4>
+              <p>Coding, Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-welog.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-coding filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/haozheli.pictures-preview2.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Haozheli.Pictures</h4>
+              <p>Coding, Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-pictures.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/blog-preview2.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Blog</h4>
+              <p>Design</p>
+              <div class="portfolio-links">
+                <a href="portfolio-blog.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-music filter-flimming">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/despacito-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Despacito - Dual Cellos</h4>
+              <p>Music</p>
+              <div class="portfolio-links">
+                <a href="portfolio-despacito.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-filmming">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/davinci-preview1.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Davinci Resolve Tutorials</h4>
+              <p>Filmming</p>
+              <div class="portfolio-links">
+                <a href="portfolio-davinci.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-filmming">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/vlog-preview2.webp" class="img-fluid" alt="poster">
+            <div class="portfolio-info">
+              <h4>Cinematic Traveling Videos</h4>
+              <p>Filmming</p>
+              <div class="portfolio-links">
+                <a href="portfolio-vlog.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details">See More <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>联系</h2>
+        <p>联系方式</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>地址</h3>
+            <p>210S 4th St, Bldg-2-307, Champaignm, Illinois</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>社交媒体</h3>
+            <div class="social-links">
+              <a href="https://github.com/Haozhe-Li" class="github"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.instagram.com/haozheli04/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/haozheli" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/channel/UCBI1IZM1HK6PP9COneQXpog" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="weixin" onclick="showPopup('assets/img/weixin-qr.webp'); return false;"><i class="fa-brands fa-weixin"></i></a>
+              <a href="https://space.bilibili.com/421778349?spm_id_from=333.1007.0.0" class="bilibili"><i class="fa-brands fa-bilibili"></i></a>
+              <a href="https://v.douyin.com/iDQXrmM/" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://www.strava.com/athletes/haozheli" class="Strava"><i class="fa-brands fa-strava"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>邮箱</h3>
+            <a href="mailto:hi@haozheli.com?subject=[DO NOT REMOVE from haozheli.com]">hi@haozheli.com</a>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>电话</h3>
+            <a href="sms:+1217 693 8436">+1 217 693 8436</a>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/mzbqbwod" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="姓名" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="邮箱" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="主题" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="信息" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">加载中</div>
+          <div class="error-message"></div>
+          <div class="sent-message">您的信息已发送。谢谢！</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    <a id="SwitchLanguage"></a><br>
+    &copy <script>document.write(new Date().getFullYear());</script> <a href="https://www.haozheli.com" target="_blank">李浩哲</a>. 保留所有权利 | 由<a href="https://bootstrapmade.com/">BootstrapMade</a>设计
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Pop up weixin QR code section-->
+  <script>
+    function showPopup(imagePath) {
+      var popup = document.getElementById("popup");
+      var img = popup.getElementsByTagName("img")[0];
+      img.src = imagePath;
+      popup.style.display = "block";
+    }
+
+    function closePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      var popup = document.getElementById("popup");
+      if (event.target == popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+
+  
+  <!-- End of Pop up weixin QR code section-->
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
