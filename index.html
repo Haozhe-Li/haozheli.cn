@@ -60,6 +60,30 @@
       font-size: 70px;
       cursor: pointer;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    #switch-language-yes, #switch-language-no {
+      margin: 10px;
+      padding: 10px 20px;
+    }
+    
   </style>
   <!-- End of Weixin Popup style -->
 
@@ -93,6 +117,14 @@
           <li><a class="nav-link" href="https://www.haozheli.com">English</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        <div id="language-modal" class="modal">
+          <div class="modal-content">
+            <p>Do you want to switch to the English version?</p>
+            <button id="switch-language-yes">Yes</button>
+            <button id="switch-language-no">No</button>
+          </div>
+        </div>
+        
       </nav><!-- .navbar -->
 
       <div class="social-links">
@@ -759,7 +791,37 @@
       }
     }
   </script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageModal = document.getElementById('language-modal');
+      const switchLanguageYes = document.getElementById('switch-language-yes');
+      const switchLanguageNo = document.getElementById('switch-language-no');
+    
+      // 判断用户是否需要切换语言
+      function askUserToSwitchLanguage() {
+        if (window.navigator.language.startsWith('zh')) {
+          // 如果浏览器语言是中文，不显示模态框
+          return;
+        }
+    
+        // 显示模态框
+        languageModal.style.display = 'block';
+    
+        // 处理用户选择
+        switchLanguageYes.addEventListener('click', function() {
+          window.location.href = 'https://haozheli.cn'; // 切换到中文网站
+        });
+    
+        switchLanguageNo.addEventListener('click', function() {
+          languageModal.style.display = 'none'; // 隐藏模态框
+        });
+      }
+    
+      // 调用函数来询问用户是否切换语言
+      askUserToSwitchLanguage();
+    });
+    
+  </script>
   
   <!-- End of Pop up weixin QR code section-->
 
