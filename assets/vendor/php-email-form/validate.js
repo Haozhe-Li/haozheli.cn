@@ -78,7 +78,7 @@
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = ('I have received your message! Please allow one business day for a response. In case of an emergency, please reach out to me via email.');
+    thisForm.querySelector('.error-message').innerHTML = ('我已收到您的信息！请在一个工作日内给我回复。若您急需回复，请通过电子邮件联系我。');
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 
